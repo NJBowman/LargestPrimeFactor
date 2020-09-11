@@ -41,6 +41,7 @@ namespace LargestPrimeFactor
                             primeFactors.Add(div);
                         }
                         num /= div;
+                        div--;
 
                         if (isPrime(num))
                         {
