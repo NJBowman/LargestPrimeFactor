@@ -9,7 +9,13 @@ namespace LargestPrimeFactor
         static void Main(string[] args)
         {
             Program p = new Program();
-            Console.WriteLine(p.LargestPrimeFactor(600851475143));
+
+            Console.WriteLine("Input Tasty Number: ");
+
+            string userInput = Console.ReadLine();
+            double userDouble = long.Parse(userInput);
+
+            Console.WriteLine("Here is big boi prime factor: " + p.LargestPrimeFactor(userDouble));
         }
 
         public double LargestPrimeFactor(double num)
@@ -18,6 +24,11 @@ namespace LargestPrimeFactor
 
             //2 is the first prime number
             double div = 2;
+
+            if (isPrime(num))
+            {
+                return num;
+            }
 
             while (div < num)
             {
